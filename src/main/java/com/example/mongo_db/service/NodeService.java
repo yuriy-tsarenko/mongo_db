@@ -23,8 +23,9 @@ public class NodeService {
     }
 
     public Mono<Node> saveOne(NodeDto dto) {
-        if (dto.getNodeRoot() != null && dto.getId() != null)
+        if (dto.getNodeRoot() != null && dto.getId() != null) {
             return nodeRepository.save(nodeMapper.mapDtoToDocument(dto));
+        }
         log.error("app received incorrect data: "
                 + " id: " + dto.getId() + " nodeRoot: " + dto.getNodeRoot());
         return Mono.empty();
