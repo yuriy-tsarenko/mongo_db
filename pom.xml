@@ -137,19 +137,6 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>${org.apache.maven.plugins.version}</version>
-                <configuration>
-                    <systemPropertyVariables>
-                        <user.timezone>UTC</user.timezone>
-                        <skipAfterFailureCount>1</skipAfterFailureCount>
-                    </systemPropertyVariables>
-                    <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                    <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${org.apache.maven.plugins.version}</version>
                 <configuration>
@@ -158,7 +145,7 @@
                         <skipAfterFailureCount>1</skipAfterFailureCount>
                     </systemPropertyVariables>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
-                    <skipTests>true</skipTests>
+                    <skipTests>false</skipTests>
                 </configuration>
             </plugin>
         </plugins>
